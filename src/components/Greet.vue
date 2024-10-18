@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { invoke } from "@tauri-apps/api/core";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { commands } from "@/bindings";
 
 const greetMsg = ref("");
 const name = ref("");
 
 async function greet() {
-  // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-  greetMsg.value = await invoke("greet", { name: name.value });
+  greetMsg.value = await commands.greet(name.value);
 }
 function keypress(event: KeyboardEvent) {
   if (event.key === "Enter") greet();
