@@ -16,5 +16,7 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
 ## shadcn-vue
-
 This template uses [shadcn-vue](https://www.shadcn-vue.com/) components.
+
+## tauri-specta
+[Tauri-specta](https://docs.rs/tauri-specta/2.0.0-rc.20/tauri_specta/index.html) is used to generated types for tauri commands. If Events are added they can also be typed using this.
