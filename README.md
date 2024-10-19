@@ -24,3 +24,18 @@ This template uses [shadcn-vue](https://www.shadcn-vue.com/) components.
 ## rename
 To rename the app run `./rename.sh <name> <identifier>`.
 For example `./rename.sh test com.example.test`
+
+## android signing
+[see here for tauri docs](https://v2.tauri.app/distribute/sign/android/)
+
+In order to install an android apk it has to be signed.
+Most of it is already configured in this template, you only need to generate a key
+```bash
+keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+```
+and create `src-tauri/gen/android/keystore.propertis` with the following content
+```
+password=<password defined when keytool was executed>
+keyAlias=upload
+storeFile=<location of the key store file, such as /Users/<user name>/upload-keystore.jks or C:\\Users\\<user name>\\upload-keystore.jks>
+```
