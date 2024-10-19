@@ -20,3 +20,7 @@ This template uses [shadcn-vue](https://www.shadcn-vue.com/) components.
 
 ## tauri-specta
 [Tauri-specta](https://docs.rs/tauri-specta/2.0.0-rc.20/tauri_specta/index.html) is used to generated types for tauri commands. If Events are added they can also be typed using this.
+
+## rename
+To rename the app run `./rename.sh <name> <identifier>`.
+For example `./rename.sh test com.example.test`
