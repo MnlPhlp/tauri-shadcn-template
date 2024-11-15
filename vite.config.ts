@@ -4,7 +4,6 @@ import autoprefixer from "autoprefixer"
 import tailwind from "tailwindcss"
 import path from "node:path";;
 
-// @ts-expect-error process is a nodejs global
 const host = process.env.TAURI_DEV_HOST;
 
 // https://vitejs.dev/config/
