@@ -37,4 +37,5 @@ serde_json = "1"
 tauri-specta = { git = "https://github.com/MnlPhlp/tauri-specta.git", features = ["derive", "typescript"] }
 specta-typescript = "0.0.7"
 specta = "=2.0.0-rc.20"
+tauri-plugin-pinia = "2.0.0"
 

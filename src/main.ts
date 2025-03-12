@@ -2,5 +2,12 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "./assets/index.css";
 import "./assets/global.css";
+import { createPinia } from "pinia";
+import { createPlugin } from "tauri-plugin-pinia";
 
-createApp(App).mount("#app");
+const pinia = createPinia();
+pinia.use(createPlugin());
+
+const app = createApp(App);
+app.use(pinia)
+app.mount("#app");

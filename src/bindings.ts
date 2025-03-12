@@ -7,6 +7,9 @@
 export const commands = {
 async greet(name: string) : Promise<string> {
     return await TAURI_INVOKE("greet", { name });
+},
+async greetFromStore() : Promise<void> {
+    await TAURI_INVOKE("greet_from_store");
 }
 }
 
