@@ -1,0 +1,11 @@
+#app {
+  @apply w-full h-full fixed p-3;
+}
+
+.row {
+  @apply flex w-full max-w-sm items-center gap-2;
+}
+
+.col {
+  @apply w-full flex flex-col items-center;
+}

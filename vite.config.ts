@@ -1,19 +1,13 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue"
-import autoprefixer from "autoprefixer"
-import tailwind from "tailwindcss"
+import tailwindcss from "@tailwindcss/vite";
 import path from "node:path";;
 
 const host = process.env.TAURI_DEV_HOST;
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
-  css: {
-    postcss: {
-      plugins: [tailwind(), autoprefixer()],
-    },
-  },
-  plugins: [vue()],
+  plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
